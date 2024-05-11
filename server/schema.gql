@@ -1,0 +1,269 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserCity {
+  """User-city relation ID"""
+  id: ID!
+
+  """User ID"""
+  userId: ID!
+
+  """City ID"""
+  cityId: ID!
+}
+
+type City {
+  """City ID"""
+  id: ID!
+
+  """City name"""
+  name: String!
+
+  """Country name."""
+  country: String!
+
+  """City longitude"""
+  longitude: Float!
+
+  """City latitude"""
+  latitude: Float!
+}
+
+type Role {
+  """Role ID"""
+  id: ID!
+
+  """Role name"""
+  name: String
+
+  """Role description"""
+  description: String
+}
+
+type UserRole {
+  """User-role relation ID"""
+  id: ID!
+
+  """User ID"""
+  userId: ID!
+
+  """Role ID"""
+  roleId: ID!
+}
+
+type User {
+  """User ID"""
+  id: ID!
+
+  """User Email"""
+  email: String!
+
+  """User Roles"""
+  roles: [Role]!
+
+  """User pinned cities"""
+  cities: [City]!
+}
+
+type Authenticated {
+  """User authenticated state."""
+  authenticated: Boolean!
+}
+
+type CityCoordinates {
+  """City latitude"""
+  latitude: Float!
+
+  """City longitude"""
+  longitude: Float!
+}
+
+type CityForecast {
+  """City ID."""
+  id: ID!
+
+  """Name of city."""
+  cityName: String!
+
+  """Coordinates of city."""
+  cityCoordinates: CityCoordinates!
+}
+
+type Weather {
+  """Forecast date."""
+  date: String!
+
+  """Forecast temperature."""
+  temperature: Float!
+
+  """Temperature feels like."""
+  temperatureFeelsLike: Float!
+
+  """Weather condition."""
+  weather: String!
+
+  """Weather description."""
+  weatherDescription: String!
+
+  """Weather icon"""
+  weatherIcon: String!
+
+  """Speed of wind."""
+  windSpeed: Float!
+
+  """Humidity."""
+  humidity: Int!
+
+  """Pressure."""
+  pressure: Int!
+}
+
+type CurrentWeather {
+  """Current weather."""
+  weather: Weather!
+
+  """Weather data of this city."""
+  city: CityForecast!
+}
+
+type Forecast {
+  """Forecasts."""
+  forecasts: [Weather]!
+
+  """Forecasts of this city."""
+  city: CityForecast!
+}
+
+type Query {
+  me: User
+  role(filter: GetRoleInput!): Role
+  roles(filter: GetRoleInput, parameters: GetRoleParametersInput): [Role!]
+  city(filter: GetCityInput!): City
+  cities(filter: GetCityInput, parameters: GetCityParametersInput): [City!]
+  fetchForecastByUser(options: FetchForecastInput): [Forecast!]
+  fetchForecastByCity(filter: GetCityInput!, options: FetchForecastInput): [Forecast!]
+  fetchCurrentWeatherByUser: [CurrentWeather!]
+  fetchCurrentWeatherByCity(filter: GetCityInput!): [CurrentWeather!]
+}
+
+input GetRoleInput {
+  """Role name"""
+  name: String
+
+  """Role description"""
+  description: String
+
+  """Role ID"""
+  id: ID
+}
+
+input GetRoleParametersInput {
+  """Order"""
+  order: String = "ASC"
+
+  """Limit"""
+  limit: Float = 10
+
+  """Offset"""
+  offset: Float = 0
+
+  """Sort by"""
+  sortBy: String = "id"
+}
+
+input GetCityInput {
+  """City name"""
+  name: String
+
+  """City longitude"""
+  longitude: Float
+
+  """City latitude"""
+  latitude: Float
+
+  """City ID"""
+  id: ID
+}
+
+input GetCityParametersInput {
+  """Order"""
+  order: String = "ASC"
+
+  """Limit"""
+  limit: Float = 10
+
+  """Offset"""
+  offset: Float = 0
+
+  """Sort by"""
+  sortBy: String = "id"
+}
+
+input FetchForecastInput {
+  """Number of days for which the weather forecast should be obtained."""
+  days: Int = 3
+}
+
+type Mutation {
+  updateUser(payload: UpdateUserInput!): [User!]
+  updatePassword(payload: UpdatePasswordInput!): [User!]!
+  createRole(role: CreateRoleInput!): Role!
+  updateRole(filter: GetRoleInput!, payload: UpdateRoleInput!): [Role!]!
+  deleteRole(filter: GetRoleInput!): Int
+  addUserRole(user: Int!, role: Int!): UserRole!
+  updateUserRole(user: Int!, current_role: Int!, new_role: Int!): [UserRole!]
+  deleteUserRole(userId: Int!, role: Int!): [UserRole!]
+  addUserCities(payload: [GetCityInput!]!): [UserCity!]!
+  updateUserCity(filter: GetCityInput!, payload: GetCityInput!): [UserCity!]
+  deleteUserCities(payload: [GetCityInput!]!): Int!
+  signUp(input: SignUpInput!): Authenticated!
+  signIn(input: SignInInput!): Authenticated!
+  logout: Authenticated!
+  refresh: Authenticated!
+}
+
+input UpdateUserInput {
+  """User Email"""
+  email: String
+}
+
+input UpdatePasswordInput {
+  """Current user password"""
+  oldPassword: String!
+
+  """New user password"""
+  newPassword: String!
+}
+
+input CreateRoleInput {
+  """Role name"""
+  name: String!
+
+  """Role description"""
+  description: String!
+}
+
+input UpdateRoleInput {
+  """Role name"""
+  name: String
+
+  """Role description"""
+  description: String
+}
+
+input SignUpInput {
+  """User Email"""
+  email: String!
+
+  """User Password"""
+  password: String!
+}
+
+input SignInInput {
+  """User Email"""
+  email: String!
+
+  """User Password"""
+  password: String!
+}

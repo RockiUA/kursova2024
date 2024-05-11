@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  padding: 15px 12px;
+  justify-content: space-between;
+}
+
+.disabledContent {
+  background: var(--joy-palette-neutral-50);
+}
+
+.check {
+  padding: 7.5px !important;
+  aspect-ratio: 1;
+}

@@ -1,0 +1,9 @@
+.container {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    white-space: normal;
+  }
+}

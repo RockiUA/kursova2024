@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/*": ["src/*", "dist/*"],
+      "@auth/*": ["src/modules/auth/*", "dist/modules/auth/*"],
+      "@config/*": ["src/config/*", "dist/config/*"],
+      "@common": ["src/modules/service/modules/common", "dist/modules/service/modules/common"],
+      "@common/*": ["src/modules/service/modules/common/*", "dist/modules/service/modules/*"],
+      "@database/*": ["src/modules/service/modules/database/*", "dist/modules/service/modules/database/*"],
+      "@logger": ["src/modules/service/modules/logger", "dist/modules/service/modules/logger"],
+      "@logger/*": ["src/modules/service/modules/logger/*", "dist/modules/service/modules/logger/*"],
+      "@user/*": ["src/modules/user/*", "dist/modules/user/*"],
+      "@role/*": ["src/modules/role/*", "dist/modules/role/*"],
+      "@city/*": ["src/modules/city/*", "dist/modules/city/*"],
+      "@service/*": ["src/modules/service/*", "dist/modules/service/*"],
+      "@weather/*": ["src/modules/weather/*", "dist/modules/weather/*"],
+      "@weather-api/*": ["src/modules/weather-api/*", "dist/modules/weather-api/*"],
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "signIn": {
+    "title": "Welcome back",
+    "subtitle": "Enter your credentials to continue.",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••••"
+      },
+      "submit": {
+        "text": "Sign in"
+      },
+      "modeSwitch": {
+        "text": "Don't have an account?",
+        "linkText": "Sign up"
+      }
+    }
+  },
+  "signUp": {
+    "title": "Welcome to Sunny Days",
+    "subtitle": "Let's get started! Please enter your details.",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••••"
+      },
+      "submit": {
+        "text": "Sign up"
+      },
+      "modeSwitch": {
+        "text": "Already have an account?",
+        "linkText": "Sign in"
+      }
+    }
+  },
+  "home": {
+    "headerBar": {
+      "title": "Pinned cities",
+      "menu": {
+        "logout": {
+          "title": "Logout"
+        }
+      }
+    },
+    "empty": "There is no pinned cities. Add them by button bellow."
+  },
+  "city": {
+    "headerBar": {
+      "menu": {
+        "delete": {
+          "title": "Delete"
+        }
+      }
+    },
+    "current": {
+      "title": "Current weather"
+    },
+    "detailed": {
+      "title": "Detailed info",
+      "cards": {
+        "feelsLike": {
+          "title": "Feels like",
+          "suffix": "°C"
+        },
+        "wind": {
+          "title": "Wind force",
+          "suffix": "m/s"
+        },
+        "humidity": {
+          "title": "Humidity",
+          "suffix": "%"
+        },
+        "pressure": {
+          "title": "Pressure",
+          "suffix": "gPa"
+        }
+      }
+    },
+    "forecast": {
+      "title": "Forecast"
+    }
+  },
+  "search": {
+    "title": "Add city",
+    "input": {
+      "placeholder": "Search"
+    }
+  } 
+}

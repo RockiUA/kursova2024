@@ -1,0 +1,39 @@
+.headerContainer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.headerBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 97%;
+  margin: 15px auto 0;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 450px) {
+  .logoHeading {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logoHeading {
+    font-size: 12.5px;
+  }
+}

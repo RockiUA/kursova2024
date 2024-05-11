@@ -1,0 +1,23 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "module": "esnext",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@public/*": ["./public/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@core/*": ["./src/core/*"],
+      "@components/*": ["./src/components/*"],
+      "@graphql/*": ["./src/graphql/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@generated": ["./src/generated"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@config/*": ["./src/config/*"]
+    }
+  },
+  "include": ["types/image.d.ts", "**/*.ts", "**/*.tsx"],
+}

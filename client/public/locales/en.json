@@ -1,0 +1,82 @@
+{
+  "header": {
+    "logout": {
+      "greeting": "Hello",
+      "logoutButton": "Logout"
+    },
+    "auth": {
+      "signIn": "Sign in",
+      "or": "or",
+      "signUp": "Sign up"
+    }
+  },
+  "auth": {
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "errors": {
+          "required": "Email Address is required!",
+          "pattern": "Email Address is invalid!"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••••",
+        "errors": {
+          "required": "Password is required!",
+          "minLength": "Password is too short, at least 8 symbols!",
+          "maxLength": "Password is too long, maximum 64 symbols!"
+        }
+      }
+    }
+  },
+  "signIn": {
+    "title": "Welcome back",
+    "subtitle": "Enter your credentials to continue.",
+    "form": {
+      "submitButton": {
+        "label": "Sign in"
+      }
+    },
+    "formSwitcher": {
+      "text": "Don't have an account?",
+      "link": "Sign up"
+    }
+  },
+  "signUp": {
+    "title": "Welcome to Sunny Days",
+    "subtitle": "Let's get started! Please enter your details.",
+    "form": {
+      "submitButton": {
+        "label": "Sign up"
+      }
+    },
+    "formSwitcher": {
+      "text": "Already have an account?",
+      "link": "Sign in"
+    }
+  },
+  "home": {
+    "search": {
+      "placeholder": "Enter a city, you want to see...",
+      "loading": "Loading...",
+      "notFound": "Nothing found."
+    },
+    "modal": {
+      "title": "Weather for",
+      "current": {
+        "title": "Current",
+        "feelsLike": "Feels like",
+        "windSpeed": "Wind speed"
+      },
+      "forecasts": {
+        "title": "Forecast",
+        "dayAmountButton": {
+          "three": "3 days",
+          "five": "5 days" 
+        }
+      }
+    }
+  }
+}

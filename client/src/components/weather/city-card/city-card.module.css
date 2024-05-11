@@ -1,0 +1,39 @@
+.cityCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 10px;
+  background: rgba( 255, 255, 255, 0.8 );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  cursor: pointer;
+}
+
+.dataContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cityCardText {
+  white-space: nowrap;
+  color: rgba( 37, 51, 65, 0.95 );
+}
+
+.cityCardTemperature {
+  margin-top: 20px;
+}
+
+.cityWeatherIcon {
+  width: 110px;
+  height: 110px;
+}
+
+@media screen and (max-width: 750px) {
+  .cityCardText {
+    white-space: normal;
+  }
+}

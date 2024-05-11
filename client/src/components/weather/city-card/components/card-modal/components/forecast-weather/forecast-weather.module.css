@@ -1,0 +1,54 @@
+.container {
+  box-shadow: none;
+  animation: fade 0.4s
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.forecastHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.start {
+  align-self: flex-start;
+}
+
+.forecastContainer {
+  display: grid;
+  gap: 1rem;
+  width: 700px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1100px) {
+  .forecastContainer {
+    width: 462px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .forecastContainer {
+    width: 225px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .forecastContainer {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,24 @@
+overwrite: true
+schema: "http://server:4000/graphql"
+documents: "src/graphql/**/*.ts"
+generates:
+  src/generated/index.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+config:
+  reactApolloVersion: 3
+  immutableTypes: true
+  namingConvention:
+    typeNames: change-case#pascalCase
+    enumValues: change-case#upperCase
+  scalars:
+    DateTime: Date
+    Date: Date
+    Time: Date
+    String: string
+  withHOC: false
+  withHooks: true
+  withComponent: false
+  useIndexSignature: true

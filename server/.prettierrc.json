@@ -1,0 +1,17 @@
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "importOrder": [
+    "^@(nestjs/(.*)$)|^(nestjs$)",
+    "<THIRD_PARTY_MODULES>",
+    "^@(auth|config|common|database|logger|user|role|city|service|weather|weather-api)/(.*)$",
+    "^./.+$",
+    "^../(?!(../+)).+$",
+    "^../../(?!(../+)).+$",
+    "^../../../(?!(../+)).+$",
+    "^../../../../(?!(../+)).+$",
+    "^../../../../../(?!(../+)).+$"
+  ],
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"]
+}

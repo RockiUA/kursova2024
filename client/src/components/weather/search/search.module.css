@@ -1,0 +1,15 @@
+.searchContainer {
+  border-radius: 8px;
+  height: 40px;
+  overflow: initial;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.list {
+  box-shadow: 0 4px 8px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 8px;
+  margin-top: 5px;
+  background-color: #fff;
+}

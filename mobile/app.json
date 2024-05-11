@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Sunny Days",
+    "slug": "sunny-days-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./public/assets/common/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./public/assets/common/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.andrewzinko.sunnydaysapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./public/assets/common/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.andrewzinko.sunnydaysapp"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0de98979-ac62-42a7-b0b8-117063969e08"
+      }
+    }
+  }
+}

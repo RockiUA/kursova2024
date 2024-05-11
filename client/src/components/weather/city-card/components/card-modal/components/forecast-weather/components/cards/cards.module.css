@@ -1,0 +1,25 @@
+.progress {
+  width: 700px;
+  height: 244px;
+  align-self: center;
+  justify-self: center;
+  gap: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .progress {
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .progress {
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .progress {
+    width: 200px;
+  }
+}

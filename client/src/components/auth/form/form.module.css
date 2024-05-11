@@ -1,0 +1,23 @@
+.form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.active,
+.disabled {
+  transition: all 0.2s;
+}
+
+.active {
+  opacity: 1; 
+}
+
+.disabled {
+  opacity: 0.4;
+}
